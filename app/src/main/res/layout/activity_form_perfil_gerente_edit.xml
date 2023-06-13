@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fundo"
+        tools:context=".forms.telagerentel_layout.form_perfil_gerente_edit">
+
+
+        <View
+            android:id="@+id/containerComponents"
+            style="@style/ContainerComponentcliente"
+            android:layout_height="250dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/circles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+        <ImageView
+            android:id="@+id/voltar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_voltarc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/perfilgerente"
+            style="@style/ContainerComponentsperfil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:civ_border_width="3dp"
+            app:civ_border_color="@color/white"
+            android:layout_marginBottom="48dp"
+            android:src="@drawable/ic_user"
+            app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/editarfoto"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Alterar foto"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:background="@color/black"
+            app:layout_constraintTop_toTopOf="@+id/perfilgerente"
+            app:layout_constraintBottom_toBottomOf="@+id/perfilgerente"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+
+
+        <TextView
+            android:id="@+id/cliente_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar Perfil"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dados Pessoais:"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/containerComponents"
+
+            />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_nome"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="330dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            app:boxStrokeColor="@color/blue"
+            android:background="@color/white"
+            android:hint="Nome"
+            app:startIconDrawable="@drawable/ic_person"
+            app:endIconMode="clear_text"
+            app:counterMaxLength="60"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text1"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dialog_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:counterMaxLength="60" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_cpf"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="330dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            app:boxStrokeColor="@color/blue"
+            android:hint="CPF"
+            app:startIconDrawable="@drawable/ic_placa"
+            android:background="@color/white"
+            app:endIconMode="clear_text"
+            app:counterMaxLength="60"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_nome"
+            >
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:id="@+id/dialog_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|phone"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            android:maxLines="60"
+            app:mask="___.___.___-__"
+            android:digits="1234567890"
+            app:maskCharacter="_"
+            app:maskStyle="completable"
+            android:textColor="@color/black"
+            app:counterMaxLength="60"
+
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_telefone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="330dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            app:boxStrokeColor="@color/blue"
+            android:background="@color/white"
+            android:hint="Telefone"
+            app:startIconDrawable="@drawable/ic_tel"
+            app:endIconMode="clear_text"
+            app:counterMaxLength="60"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_cpf"
+            >
+
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/edit_fone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/black"
+                android:textSize="20dp"
+                android:maxLines="1"
+                android:digits="1234567890"
+                app:mask="(__) _____-____"
+                app:maskStyle="normal"
+                app:maskCharacter="_"
+                android:textColor="@color/black"
+                app:counterMaxLength="60"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/edit_data_nasc"
+            style="@style/Edit_textnasc"
+            android:layout_width="330dp"
+            android:layout_height="65dp"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:hint="Data de Nascimento"
+            android:inputType="datetime"
+            android:layout_marginTop="15dp"
+            android:textColorHint="@color/nasc"
+            android:padding="17dp"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_telefone" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_end2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="330dp"
+            android:layout_height="70dp"
+            android:background="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="0dp"
+            app:boxStrokeColor="@color/blue"
+            android:hint="Endereço"
+            app:startIconDrawable="@drawable/ic_end"
+            app:endIconMode="clear_text"
+            app:counterMaxLength="60"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_data_nasc"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:counterMaxLength="60" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editperfil"
+            style="@style/Button"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:padding="1dp"
+            android:text="Salvar"
+            android:textSize="20dp"
+            android:typeface="serif"
+            app:layout_constraintTop_toBottomOf="@+id/edit_end2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

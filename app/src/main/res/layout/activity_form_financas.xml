@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:background="@color/fundo"
+    android:layout_height="match_parent"
+    tools:context=".forms.telagerentel_layout.form_financas">
+
+    <View
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/principal"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/textViewM"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Finanças"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"/>
+
+    <ImageView
+        android:id="@+id/voltar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/ic_voltarc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/minorunovo2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+
+    <View
+        android:id="@+id/containerComponents"
+        style="@style/ContainerComponentsp"
+        android:layout_height="1200dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rel" />
+
+
+    <View
+        android:id="@+id/containerComponents5"
+        style="@style/ContainerComponents3"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/containerComponents" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Selecione um mês"
+        android:textColor="@color/black"
+        android:typeface="serif"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/containerComponents5"
+        app:layout_constraintStart_toStartOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/containerComponents5" />
+
+
+    <TextView
+        android:id="@+id/rel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relatórios Mensais"
+        android:textColor="@color/principal"
+        android:textSize="27sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+
+    <ImageView
+        android:id="@+id/drop"
+        android:layout_width="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_drop"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toTopOf="@+id/spinner"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner"/>
+
+    <TextView
+        android:id="@+id/txtrel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="Clientes"
+        android:textColor="@color/azul"
+        android:typeface="serif"
+        android:textSize="28dp"
+        app:layout_constraintStart_toStartOf="@id/containerComponents5"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5" />
+
+
+    <TextView
+        android:id="@+id/txtttcliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="Numero de Clientes"
+        android:textColor="@color/black"
+        android:typeface="serif"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/txtrel1" />
+
+
+    <TextView
+        android:id="@+id/nclientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtttcliente" />
+
+    <TextView
+        android:id="@+id/txtttmensal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Numero de Mensalistas"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtttcliente"
+        app:layout_constraintTop_toBottomOf="@id/txtttcliente" />
+
+    <TextView
+        android:id="@+id/nmensalistas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtttmensal" />
+
+    <TextView
+        android:id="@+id/txtclientesM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Numero de Clientes ( Moto )"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtttmensal"
+        app:layout_constraintTop_toBottomOf="@id/txtttmensal" />
+
+
+    <TextView
+        android:id="@+id/clientesM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtclientesM" />
+
+    <TextView
+        android:id="@+id/txtclientesC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Numero de Clientes ( Carro)"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtttmensal"
+        app:layout_constraintTop_toBottomOf="@id/txtclientesM" />
+
+
+    <TextView
+        android:id="@+id/txtrel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        android:text="Custos Operacionais Mensais"
+        android:textColor="@color/azul"
+        android:typeface="serif"
+        android:textSize="28dp"
+        app:layout_constraintStart_toStartOf="@id/containerComponents5"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/txtclientesC" />
+
+
+    <TextView
+        android:id="@+id/clientesC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtclientesC" />
+
+
+    <TextView
+        android:id="@+id/txtaluguel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Aluguel"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtttmensal"
+        app:layout_constraintTop_toBottomOf="@id/txtrel2" />
+
+
+    <TextView
+        android:id="@+id/valuguel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="R$ 0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtaluguel" />
+
+
+    <TextView
+        android:id="@+id/txtenergia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Agua + Luz"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtttmensal"
+        app:layout_constraintTop_toBottomOf="@id/txtaluguel" />
+
+
+    <TextView
+        android:id="@+id/venergia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="R$ 0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtenergia" />
+
+    <TextView
+        android:id="@+id/txtlimpeza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Material de Limpeza"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtttmensal"
+        app:layout_constraintTop_toBottomOf="@id/txtenergia" />
+
+
+    <TextView
+        android:id="@+id/vlimpeza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="R$ 0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtlimpeza" />
+
+    <TextView
+        android:id="@+id/txtterceiros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Serviços de Terceiros"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtttmensal"
+        app:layout_constraintTop_toBottomOf="@id/txtlimpeza" />
+
+
+    <TextView
+        android:id="@+id/vterceiros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="R$ 0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtterceiros" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/txtsalarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Funcionários"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtttmensal"
+        app:layout_constraintTop_toBottomOf="@id/txtterceiros" />
+
+
+    <TextView
+        android:id="@+id/vsalarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="R$ 0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtsalarios" />
+
+    <TextView
+        android:id="@+id/txtredimentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Rendimentos"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtsalarios"
+        app:layout_constraintTop_toBottomOf="@id/txtrel3" />
+
+
+    <TextView
+        android:id="@+id/nredimentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="R$ 0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtredimentos" />
+
+    <TextView
+        android:id="@+id/txtgastos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Custos Operacionais"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtsalarios"
+        app:layout_constraintTop_toBottomOf="@id/txtredimentos" />
+
+
+    <TextView
+        android:id="@+id/ngastos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="R$ 0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtgastos" />
+
+    <TextView
+        android:id="@+id/txtimpostp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Imposto (ISS)"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtsalarios"
+        app:layout_constraintTop_toBottomOf="@id/txtgastos" />
+
+
+    <TextView
+        android:id="@+id/nimposto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="R$ 0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtimpostp" />
+
+
+
+    <TextView
+        android:id="@+id/txtmanutencao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Manutenção"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtsalarios"
+        app:layout_constraintTop_toBottomOf="@id/txtsalarios" />
+
+
+
+
+    <TextView
+        android:id="@+id/txtrel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        android:text="Resultado Final Mensal"
+        android:textColor="@color/azul"
+        android:typeface="serif"
+        android:textSize="28dp"
+        app:layout_constraintStart_toStartOf="@id/containerComponents5"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/bt_edit" />
+
+
+    <TextView
+        android:id="@+id/nmanutencao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="R$ 0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtmanutencao" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_edit"
+        style="@style/Button"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="30dp"
+        app:layout_goneMarginEnd="20dp"
+        android:text="Editar"
+        android:typeface="serif"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/nmanutencao"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/txtlucro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Saldo Final"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/txtmanutencao"
+        app:layout_constraintTop_toBottomOf="@id/txtimpostp" />
+
+
+    <TextView
+        android:id="@+id/nlucro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="R$ 0"
+        android:textColor="@color/red2"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents5"
+        app:layout_constraintTop_toBottomOf="@id/containerComponents5"
+        app:layout_constraintTop_toTopOf="@id/txtlucro" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_pdf"
+        style="@style/Buttoncancel"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:paddingEnd="10dp"
+        android:text="Salvar"
+        android:typeface="serif"
+        android:textSize="24dp"
+        android:drawableRight="@drawable/ic_pdf"
+        app:layout_constraintTop_toBottomOf="@+id/txtlucro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5sp"
+        android:spinnerMode="dropdown"
+        android:textSize="16sp"
+        android:typeface="serif"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/containerComponents5"
+        app:layout_constraintBottom_toBottomOf="@id/containerComponents5"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

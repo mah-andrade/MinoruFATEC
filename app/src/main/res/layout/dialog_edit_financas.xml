@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="580dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:background="@drawable/alerdialoglayout"
+    android:layout_gravity="center">
+
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Defina os valores dos custos operacionais:"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtvaloraluguel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aluguel:"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="normal"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt2"
+
+        />
+
+
+    <EditText
+        android:id="@+id/valoraluguel"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:background="@drawable/edit_text"
+        android:inputType="number"
+        android:maxLength="8"
+        android:digits="0123456789,."
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:layout_marginStart="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtvaloraluguel"
+        app:layout_constraintBottom_toBottomOf="@+id/txtvaloraluguel"
+        app:layout_constraintStart_toEndOf="@+id/txtvaloraluguel" />
+
+
+    <TextView
+        android:id="@+id/txtvalorenergia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:text="Agua + Luz:"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="normal"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvaloraluguel"
+
+        />
+
+    <EditText
+        android:id="@+id/valorenergia"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:background="@drawable/edit_text"
+        android:maxLength="8"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="#4d4d4d"
+        android:digits="0123456789,."
+        app:layout_constraintTop_toTopOf="@+id/txtvalorenergia"
+        app:layout_constraintBottom_toBottomOf="@+id/txtvalorenergia"
+        app:layout_constraintStart_toStartOf="@+id/valoraluguel"  />
+
+    <TextView
+        android:id="@+id/txtvalorlimpeza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Material de Limpeza:"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+
+        android:textStyle="normal"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvalorenergia"
+
+        />
+
+
+    <EditText
+        android:id="@+id/valorlimpeza"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:background="@drawable/edit_text"
+        android:textAlignment="center"
+        android:maxLength="8"
+        android:inputType="number"
+        android:digits="0123456789,."
+        app:layout_constraintTop_toTopOf="@+id/txtvalorlimpeza"
+        app:layout_constraintBottom_toBottomOf="@+id/txtvalorlimpeza"
+        app:layout_constraintStart_toStartOf="@+id/valoraluguel"  />
+
+    <TextView
+        android:id="@+id/txtvalorterceiros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serviços de Terceiros:"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="normal"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvalorlimpeza"
+
+        />
+
+
+    <EditText
+        android:id="@+id/valorterceiros"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:background="@drawable/edit_text"
+        android:textAlignment="center"
+        android:textColorHint="#4d4d4d"
+        android:maxLength="8"
+        android:inputType="number"
+        android:digits="0123456789,."
+        app:layout_constraintTop_toTopOf="@+id/txtvalorterceiros"
+        app:layout_constraintBottom_toBottomOf="@+id/txtvalorterceiros"
+        app:layout_constraintStart_toStartOf="@+id/valoraluguel"  />
+
+
+    <TextView
+        android:id="@+id/txtvalormanutencao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manutenção:"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="normal"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvalorterceiros"
+
+        />
+
+
+    <EditText
+        android:id="@+id/valormanutencao"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:background="@drawable/edit_text"
+        android:textAlignment="center"
+        android:textColorHint="#4d4d4d"
+        android:maxLength="8"
+        android:inputType="number"
+        android:digits="0123456789,."
+        app:layout_constraintBottom_toBottomOf="@+id/txtvalormanutencao"
+        app:layout_constraintStart_toStartOf="@+id/valoraluguel"
+        app:layout_constraintTop_toTopOf="@+id/txtvalormanutencao" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_salvar"
+        style="@style/Button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="15dp"
+        android:text="Salvar"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_inf_cancelar"
+        style="@style/Buttoncancel"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="15dp"
+        android:text="Fechar"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_salvar"
+        app:layout_constraintEnd_toStartOf="@id/bt_salvar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bt_salvar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

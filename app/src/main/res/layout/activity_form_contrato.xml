@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".forms.telacliente_layout.form_contrato">
+
+
+    <View
+        android:id="@+id/containerComponents"
+        android:layout_width="match_parent"
+        android:background="@color/principal"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/minorunovo2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerComponents"/>
+
+
+    <TextView
+        android:id="@+id/textViewM"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Contrato"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/containerComponents"
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponents"/>
+
+    <ImageView
+        android:id="@+id/voltar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/ic_voltarc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+        app:layout_constraintTop_toTopOf="@id/containerComponents" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Informações sobre o contrato"
+        android:textAlignment="center"
+        android:textColor="@color/azul"
+        android:textSize="26dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"/>
+
+
+
+    <View
+        android:id="@+id/containerComponents2"
+        style="@style/ContainerComponentsp"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text1" />
+
+    <TextView
+        android:id="@+id/txtinfnome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:text="Nome:"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents2"
+        app:layout_constraintTop_toTopOf="@+id/containerComponents2" />
+
+    <TextView
+        android:id="@+id/txtinfentrada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:text="Inicio:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents2"
+        app:layout_constraintTop_toBottomOf="@+id/txtinfotel" />
+
+    <TextView
+        android:id="@+id/txtvencimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:text="Vencimento:"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:typeface="serif"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents2"
+        app:layout_constraintTop_toBottomOf="@+id/txtinfentrada" />
+
+    <TextView
+        android:id="@+id/txtinfplaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:text="Placa:"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:typeface="serif"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents2"
+        app:layout_constraintTop_toBottomOf="@+id/txtmodelo" />
+
+    <TextView
+        android:id="@+id/txtnome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:maxLength="15"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toEndOf="@+id/txtinfnome"
+        app:layout_constraintTop_toTopOf="@+id/txtinfnome" />
+
+    <TextView
+        android:id="@+id/txtdataentrada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:typeface="serif"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/txtnome"
+        app:layout_constraintTop_toTopOf="@+id/txtinfentrada" />
+
+
+    <TextView
+        android:id="@+id/txtdatavencimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@+id/txtnome"
+        app:layout_constraintTop_toTopOf="@+id/txtvencimento" />
+
+    <TextView
+        android:id="@+id/txtplaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@+id/txtnome"
+        app:layout_constraintTop_toTopOf="@+id/txtinfplaca" />
+
+    <TextView
+        android:id="@+id/txtinfoveiculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:textSize="24dp"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Veiculo:"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents2"
+        app:layout_constraintTop_toBottomOf="@+id/txtvencimento" />
+
+
+    <TextView
+        android:id="@+id/txtmodelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="24dp"
+        android:typeface="serif"
+        android:textColor="@color/black"
+        android:text="Modelo:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtinfnome"
+        app:layout_constraintTop_toBottomOf="@+id/txtinfoveiculo" />
+
+    <TextView
+        android:id="@+id/txtmodelovec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@+id/txtnome"
+        app:layout_constraintTop_toTopOf="@+id/txtmodelo" />
+
+    <TextView
+        android:id="@+id/txtvec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:typeface="serif"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/txtnome"
+        app:layout_constraintTop_toTopOf="@+id/txtinfoveiculo" />
+
+    <TextView
+        android:id="@+id/txtinfotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="24dp"
+        android:typeface="serif"
+        android:textColor="@color/black"
+        android:text="Telefone:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtinfnome"
+        app:layout_constraintTop_toBottomOf="@+id/txtinfnome" />
+
+
+    <TextView
+        android:id="@+id/txttel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@+id/txtnome"
+        app:layout_constraintTop_toTopOf="@id/txtinfotel" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_inf_renova"
+        style="@style/Button"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="30dp"
+        android:text="Renovar"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

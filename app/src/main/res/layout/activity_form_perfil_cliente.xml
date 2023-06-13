@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fundo"
+        tools:context=".forms.telacliente_layout.form_perfilCliente">
+
+
+        <View
+            android:id="@+id/containerComponents"
+            style="@style/ContainerComponentcliente"
+            android:layout_height="250dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/circles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/voltar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_voltarc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/perfil"
+            style="@style/ContainerComponentsperfil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:civ_border_width="3dp"
+            app:civ_border_color="@color/white"
+            android:layout_marginBottom="48dp"
+            android:src="@drawable/profile"
+            app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/cliente_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meu Perfil"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dados Pessoais:"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/containerComponents"
+
+            />
+
+
+        <TextView
+            android:id="@+id/nometxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="3dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:typeface="serif"
+            app:layout_constraintStart_toStartOf="@id/idcliente"
+            app:layout_constraintTop_toBottomOf="@+id/text1"
+
+            />
+
+        <TextView
+            android:id="@+id/idcliente"
+            style="@style/Edit_textnasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:drawableLeft="@drawable/ic_person"
+            android:inputType="datetime"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:padding="17dp"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nometxt"
+            />
+
+
+        <TextView
+            android:id="@+id/cpftxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPF:"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:typeface="serif"
+            app:layout_constraintStart_toStartOf="@+id/cpfcliente"
+            app:layout_constraintTop_toBottomOf="@+id/idcliente"
+
+            />
+
+        <TextView
+            android:id="@+id/cpfcliente"
+            style="@style/Edit_textnasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:drawableLeft="@drawable/ic_placa"
+            android:inputType="datetime"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/nasc"
+            android:textAlignment="center"
+            android:padding="17dp"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cpftxt"
+            />
+
+        <TextView
+            android:id="@+id/teltxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefone:"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:typeface="serif"
+            app:layout_constraintStart_toStartOf="@id/telcliente"
+            app:layout_constraintTop_toBottomOf="@+id/cpfcliente"
+
+            />
+
+        <TextView
+            android:id="@+id/telcliente"
+            style="@style/Edit_textnasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:drawableLeft="@drawable/ic_tel"
+            android:inputType="datetime"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/nasc"
+            android:padding="17dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teltxt"
+            />
+
+
+
+        <TextView
+            android:id="@+id/datatxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data de Nascimento:"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:typeface="serif"
+            app:layout_constraintStart_toStartOf="@id/datacliente"
+            app:layout_constraintTop_toBottomOf="@+id/telcliente"
+
+            />
+
+        <TextView
+            android:id="@+id/datacliente"
+            style="@style/Edit_textnasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:inputType="datetime"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/nasc"
+            android:padding="17dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datatxt"
+            />
+
+        <TextView
+            android:id="@+id/enderecotxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Endereço:"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:typeface="serif"
+            app:layout_constraintStart_toStartOf="@id/enderecocliente"
+            app:layout_constraintTop_toBottomOf="@+id/datacliente"
+
+            />
+
+        <TextView
+            android:id="@+id/enderecocliente"
+            style="@style/Edit_textnasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:drawableLeft="@drawable/ic_end"
+            android:inputType="datetime"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/nasc"
+            android:padding="17dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enderecotxt"
+            />
+
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Veículo Cadastrado"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enderecocliente"
+
+            />
+
+        <TextView
+            android:id="@+id/modelotxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modelo:"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:typeface="serif"
+            app:layout_constraintStart_toStartOf="@+id/cpfcliente"
+            app:layout_constraintTop_toBottomOf="@+id/text2"
+
+            />
+
+        <TextView
+            android:id="@+id/modelocliente"
+            style="@style/Edit_textnasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:drawableLeft="@drawable/ic_placa2"
+            android:inputType="datetime"
+            android:padding="17dp"
+            android:textAlignment="center"
+            android:textColorHint="@color/nasc"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modelotxt" />
+
+        <TextView
+            android:id="@+id/placatxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Placa:"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:typeface="serif"
+            app:layout_constraintStart_toStartOf="@id/modelocliente"
+            app:layout_constraintTop_toBottomOf="@+id/modelocliente"
+
+            />
+
+        <TextView
+            android:id="@+id/placacliente"
+            style="@style/Edit_textnasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:drawableLeft="@drawable/ic_placa"
+            android:inputType="datetime"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/nasc"
+            android:padding="17dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/placatxt"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editperfil"
+            style="@style/Button"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:padding="1dp"
+            android:text="Editar Perfil"
+            android:textSize="20dp"
+            android:typeface="serif"
+            app:layout_constraintTop_toBottomOf="@+id/placacliente"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

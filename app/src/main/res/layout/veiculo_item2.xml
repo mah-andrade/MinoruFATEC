@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="185dp"
+    >
+
+
+    <View
+        android:id="@+id/containerComponentsp"
+        style="@style/Edit_textl"
+        android:layout_width="400dp"
+        android:layout_height="170dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_veiculo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/containerComponentsp"
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponentsp"
+        app:srcCompat="@drawable/ic_carro" />
+
+
+    <TextView
+        android:id="@+id/txtplaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Placa:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/txtnome"
+        app:layout_constraintTop_toBottomOf="@+id/txtnome" />
+
+    <TextView
+        android:id="@+id/txtnome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        android:text="Nome:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintStart_toEndOf="@+id/imageView_veiculo"
+        app:layout_constraintTop_toTopOf="@id/containerComponentsp" />
+
+    <TextView
+        android:id="@+id/txttipocliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="1dp"
+        android:text="Tipo de cliente:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@+id/txtvalor"
+        app:layout_constraintTop_toBottomOf="@+id/txtvalor" />
+
+    <TextView
+        android:id="@+id/txtvalor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="30dp"
+        android:text="Valor Pago:"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:typeface="serif"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtplaca"
+        app:layout_constraintTop_toBottomOf="@+id/txtplaca" />
+
+
+    <TextView
+        android:id="@+id/text_placa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:text="XRR-1458"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:typeface="serif"
+        app:layout_constraintStart_toEndOf="@+id/txtplaca"
+        app:layout_constraintTop_toTopOf="@id/txtplaca" />
+
+    <TextView
+        android:id="@+id/text_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="5dp"
+        android:text="Douglas"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:typeface="serif"
+        app:layout_constraintTop_toTopOf="@+id/txtnome"
+        app:layout_constraintStart_toEndOf="@+id/txtnome" />
+
+    <TextView
+        android:id="@+id/text_horario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="Avulso"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:typeface="serif"
+        app:layout_constraintTop_toTopOf="@id/txttipocliente"
+        app:layout_constraintStart_toEndOf="@+id/txttipocliente"
+/>
+
+    <TextView
+        android:id="@+id/text_valopagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="26dp"
+        android:text="25 reais"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:typeface="serif"
+        app:layout_constraintTop_toTopOf="@+id/txtvalor"
+        app:layout_constraintStart_toEndOf="@+id/txtvalor" />
+</androidx.constraintlayout.widget.ConstraintLayout>

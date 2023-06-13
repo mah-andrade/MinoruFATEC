@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/fundo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".forms.telagerentel_layout.form_precos">
+
+
+
+    <View
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/principal"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/textViewM"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tabela de Preços"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Defina os valores cobrados pelo estacionamento:"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"/>
+
+
+
+    <ImageView
+        android:id="@+id/voltar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/ic_voltarc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/minorunovo2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <View
+        android:id="@+id/containerComponents"
+        style="@style/ContainerComponentsp"
+        android:layout_height="430sp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/containerComponents3"
+         />
+
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/principal"
+        android:text="Carro"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toTopOf="@+id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:text="Estacionamento:"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/txt1"
+
+        />
+
+
+    <TextView
+        android:id="@+id/horacarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="24sp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:text="Hora"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/txt2"
+         />
+
+    <TextView
+        android:id="@+id/horavalorcarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:typeface="serif"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/dark_red"
+        android:text="R$5,00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horacarro" />
+
+
+    <TextView
+        android:id="@+id/diariocarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="Diário"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/horacarro"
+        app:layout_constraintTop_toBottomOf="@id/horacarro"
+        app:layout_constraintVertical_bias="0.992" />
+
+
+    <TextView
+        android:id="@+id/diarovalorcarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$24,00"
+        android:textColor="@color/dark_red"
+        android:textSize="24sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/horavalorcarro"
+        app:layout_constraintTop_toTopOf="@+id/diariocarro" />
+
+    <TextView
+        android:id="@+id/mensalocarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="Mensal"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/horacarro"
+        app:layout_constraintTop_toBottomOf="@id/diariocarro"
+         />
+
+
+    <TextView
+        android:id="@+id/txtlavacarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:text="Lavagem"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/horacarro"
+        app:layout_constraintTop_toBottomOf="@id/txt3"
+         />
+
+    <TextView
+        android:id="@+id/valorlavocarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/dark_red"
+        android:text="R$30,00"
+        android:typeface="serif"
+        app:layout_constraintTop_toBottomOf="@id/diarovalorcarro"
+        app:layout_constraintEnd_toEndOf="@id/horavalorcarro"
+        app:layout_constraintTop_toTopOf="@+id/txtlavacarro" />
+
+    <TextView
+        android:id="@+id/mensalvalorcarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/dark_red"
+        android:text="R$300,00"
+        android:typeface="serif"
+        app:layout_constraintTop_toBottomOf="@id/diarovalorcarro"
+        app:layout_constraintEnd_toEndOf="@id/horavalorcarro"
+        app:layout_constraintTop_toTopOf="@+id/mensalocarro" />
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:text="Outros Serviços:"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/mensalocarro"
+
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_alt_carro"
+        style="@style/Button"
+        android:layout_width="130sp"
+        android:layout_height="50sp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="25dp"
+        android:padding="1dp"
+        android:text="Alterar"
+        android:textSize="20sp"
+        android:typeface="serif"
+        app:layout_constraintTop_toBottomOf="@+id/valorlavocarro"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+    <View
+        android:id="@+id/containerComponents3"
+        style="@style/ContainerComponentsp"
+        android:layout_height="420sp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerComponents"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <TextView
+        android:id="@+id/txt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:text="Moto"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/containerComponents3"
+        app:layout_constraintTop_toTopOf="@+id/containerComponents3"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents3"
+         />
+
+    <TextView
+        android:id="@+id/txt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:text="Estacionamento:"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/txt4"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/horamoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="26sp"
+        android:layout_marginStart="25dp"
+        android:textColor="@color/black"
+        android:text="Hora"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/containerComponents3"
+
+        app:layout_constraintTop_toBottomOf="@+id/txt6"
+         />
+
+    <TextView
+        android:id="@+id/horavalormoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/dark_red"
+        android:text="R$3,00"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horamoto" />
+
+
+    <TextView
+        android:id="@+id/diariomoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="Diário"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/horamoto"
+        app:layout_constraintTop_toBottomOf="@id/horamoto"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <TextView
+        android:id="@+id/diarovalormoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textColor="@color/dark_red"
+        android:text="R$15,00"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@id/horavalormoto"
+        app:layout_constraintTop_toTopOf="@+id/diariomoto" />
+
+
+    <TextView
+        android:id="@+id/mensalomoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="Mensal"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/horamoto"
+        app:layout_constraintTop_toBottomOf="@id/diariomoto"
+         />
+
+    <TextView
+        android:id="@+id/txt8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:text="Outros Serviços:"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/mensalomoto"
+
+        />
+
+    <TextView
+        android:id="@+id/txtlavamoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:text="Lavagem"
+        android:typeface="serif"
+        app:layout_constraintStart_toStartOf="@id/horacarro"
+        app:layout_constraintTop_toBottomOf="@id/txt8"
+        />
+
+    <TextView
+        android:id="@+id/valorlavomoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textColor="@color/dark_red"
+        android:text="R$15,00"
+        android:typeface="serif"
+        app:layout_constraintTop_toBottomOf="@id/diarovalorcarro"
+        app:layout_constraintEnd_toEndOf="@id/horavalorcarro"
+        app:layout_constraintTop_toTopOf="@+id/txtlavamoto" />
+
+    <TextView
+        android:id="@+id/mensalvalormoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textColor="@color/dark_red"
+        android:text="R$165,00"
+        android:typeface="serif"
+        app:layout_constraintTop_toBottomOf="@id/diarovalormoto"
+        app:layout_constraintEnd_toEndOf="@id/horavalormoto"
+        app:layout_constraintTop_toTopOf="@+id/mensalomoto" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_alt_moto"
+        style="@style/Button"
+        android:layout_width="130sp"
+        android:layout_height="50sp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="12dp"
+        android:padding="1dp"
+        android:text="Alterar"
+        android:textSize="20dp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@id/containerComponents3"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

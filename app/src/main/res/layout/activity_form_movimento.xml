@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".forms.telagerentel_layout.form_movimento">
+
+        <View
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:background="@color/principal"
+            android:layout_height="55dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/textViewM"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Estacionamento"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:typeface="serif"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"/>
+
+        <ImageView
+            android:id="@+id/voltar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_voltarc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/minorunovo2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+
+        <!-- <TextView
+             android:id="@+id/datamov"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="15dp"
+             android:textSize="22sp"
+             android:textColor="@color/black"
+             android:text="03/11/2022"
+             android:typeface="monospace"
+             app:layout_constraintTop_toBottomOf="@id/toolbar"
+             app:layout_constraintStart_toEndOf="@+id/aaaa"
+             app:layout_constraintVertical_bias="0.992" />
+     -->
+
+        <TextView
+            android:id="@+id/aaaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/principal"
+            android:text="Status Agora:"
+            android:layout_marginTop="30sp"
+            android:typeface="serif"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"/>
+
+
+
+
+
+        <View
+            android:id="@+id/containerComponents2"
+            style="@style/ContainerComponentsp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/aaaa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+
+        <TextView
+            android:id="@+id/txti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Numero de vagas disponiveis:"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:typeface="serif"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/containerComponents2"/>
+
+
+        <TextView
+            android:id="@+id/vgsocupadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/blue"
+            android:text="10"
+            android:layout_marginStart="5dp"
+            android:typeface="serif"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txti"
+            app:layout_constraintTop_toTopOf="@id/txti"/>
+
+
+        <TextView
+            android:id="@+id/txti2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Numero de vagas ocupadas:"
+            android:layout_marginTop="18dp"
+            android:typeface="serif"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txti"/>
+
+
+        <TextView
+            android:id="@+id/vgsdisponiveis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/red2"
+            android:text="35"
+            android:layout_marginStart="27dp"
+            android:typeface="serif"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txti2"
+            app:layout_constraintTop_toTopOf="@id/txti2"/>
+
+
+        <TextView
+            android:id="@+id/aaaa2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/principal"
+            android:text="Lista de clientes hoje: "
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:typeface="serif"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerComponents2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/containerComponents"/>
+
+
+
+        <View
+            android:id="@+id/containerComponents"
+            style="@style/ContainerComponentsp"
+            android:layout_height="400dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_vec_mov"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/containerComponents" />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.core.widget.NestedScrollView>
